@@ -6,13 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		808436372EFF2AC90030CA1E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 808436362EFF2AC90030CA1E /* FirebaseAuth */; };
+		808436392EFF2AC90030CA1E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 808436382EFF2AC90030CA1E /* FirebaseFirestore */; };
+		8084363B2EFF2AC90030CA1E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8084363A2EFF2AC90030CA1E /* FirebaseMessaging */; };
+		8084363D2EFF2AC90030CA1E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8084363C2EFF2AC90030CA1E /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		808DD6F22EFB3B5600A24068 /* Wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		808DD7132EFB455400A24068 /* Exceptions for "Wave" folder in "Wave" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 808DD6F12EFB3B5600A24068 /* Wave */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		808DD6F42EFB3B5600A24068 /* Wave */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				808DD7132EFB455400A24068 /* Exceptions for "Wave" folder in "Wave" target */,
+			);
 			path = Wave;
 			sourceTree = "<group>";
 		};
@@ -23,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8084363B2EFF2AC90030CA1E /* FirebaseMessaging in Frameworks */,
+				8084363D2EFF2AC90030CA1E /* FirebaseStorage in Frameworks */,
+				808436372EFF2AC90030CA1E /* FirebaseAuth in Frameworks */,
+				808436392EFF2AC90030CA1E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +89,10 @@
 			);
 			name = Wave;
 			packageProductDependencies = (
+				808436362EFF2AC90030CA1E /* FirebaseAuth */,
+				808436382EFF2AC90030CA1E /* FirebaseFirestore */,
+				8084363A2EFF2AC90030CA1E /* FirebaseMessaging */,
+				8084363C2EFF2AC90030CA1E /* FirebaseStorage */,
 			);
 			productName = Wave;
 			productReference = 808DD6F22EFB3B5600A24068 /* Wave.app */;
@@ -94,6 +122,9 @@
 			);
 			mainGroup = 808DD6E92EFB3B5600A24068;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				808436352EFF2AC90030CA1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 808DD6F32EFB3B5600A24068 /* Products */;
 			projectDirPath = "";
@@ -256,6 +287,11 @@
 				DEVELOPMENT_TEAM = YYAVM9P7L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wave/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Wave needs access to your Apple Music library to display your listening statistics and create personalized playlists.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +320,11 @@
 				DEVELOPMENT_TEAM = YYAVM9P7L9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wave/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Wave needs access to your Apple Music library to display your listening statistics and create personalized playlists.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +365,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		808436352EFF2AC90030CA1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		808436362EFF2AC90030CA1E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 808436352EFF2AC90030CA1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		808436382EFF2AC90030CA1E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 808436352EFF2AC90030CA1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8084363A2EFF2AC90030CA1E /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 808436352EFF2AC90030CA1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8084363C2EFF2AC90030CA1E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 808436352EFF2AC90030CA1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 808DD6EA2EFB3B5600A24068 /* Project object */;
 }

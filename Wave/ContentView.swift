@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var firebaseService = FirebaseService.shared
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if firebaseService.isAuthenticated {
+            MainTabView()
+        } else {
+            AuthenticationView()
         }
-        .padding()
     }
 }
 
