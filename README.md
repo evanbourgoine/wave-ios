@@ -89,7 +89,7 @@ Evan Bourgoine
 ## 📄 License
 
 <<<<<<< HEAD
-[Your License Here - e.g., MIT]
+MIT
 
 ## 👨‍💻 Author
 
@@ -101,8 +101,6 @@ Evan Bourgoine
 - Firebase for backend services
 - SwiftUI community for inspiration
 =======
-[Your License]
->>>>>>> 312304d (Updated README, added screenshots)
 
 ---
 
