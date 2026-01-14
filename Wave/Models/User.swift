@@ -81,98 +81,6 @@ struct User: Codable, Identifiable {
     }
 }
 
-// MARK: - Activity Model
-
-struct Activity: Codable, Identifiable {
-    @DocumentID var id: String?
-    var userId: String
-    var activityType: ActivityType
-    var itemId: String // Song/Album/Artist ID
-    var itemTitle: String
-    var itemSubtitle: String // Artist name or album name
-    var timestamp: Date
-    var friendId: String? // If activity is friend-related
-    
-    enum ActivityType: String, Codable {
-        case played = "played"
-        case loved = "loved"
-        case rated = "rated"
-        case shared = "shared"
-        case friendPlayed = "friend_played"
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case userId = "user_id"
-        case activityType = "activity_type"
-        case itemId = "item_id"
-        case itemTitle = "item_title"
-        case itemSubtitle = "item_subtitle"
-        case timestamp
-        case friendId = "friend_id"
-    }
-}
-
-// MARK: - Rating Model
-
-struct Rating: Codable, Identifiable {
-    @DocumentID var id: String?
-    var userId: String
-    var itemId: String
-    var itemType: RatingItemType
-    var itemTitle: String
-    var itemSubtitle: String // Artist or album artist
-    var rating: Double // 0.0 to 5.0, increments of 0.5
-    var ratedAt: Date
-    
-    enum RatingItemType: String, Codable {
-        case song = "song"
-        case album = "album"
-        case artist = "artist"
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case userId = "user_id"
-        case itemId = "item_id"
-        case itemType = "item_type"
-        case itemTitle = "item_title"
-        case itemSubtitle = "item_subtitle"
-        case rating
-        case ratedAt = "rated_at"
-    }
-}
-
-// MARK: - Pinned Item Model
-
-struct PinnedItem: Codable, Identifiable {
-    @DocumentID var id: String?
-    var userId: String
-    var itemId: String
-    var itemType: PinnedItemType
-    var itemTitle: String
-    var itemSubtitle: String
-    var artworkURL: String?
-    var pinnedAt: Date
-    
-    enum PinnedItemType: String, Codable {
-        case song = "song"
-        case album = "album"
-        case artist = "artist"
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case userId = "user_id"
-        case itemId = "item_id"
-        case itemType = "item_type"
-        case itemTitle = "item_title"
-        case itemSubtitle = "item_subtitle"
-        case artworkURL = "artwork_url"
-        case pinnedAt = "pinned_at"
-    }
-}
-
 // MARK: - Top Artist Model
 
 struct TopArtist: Codable, Identifiable {
@@ -203,34 +111,6 @@ struct TopArtist: Codable, Identifiable {
         case timePeriod = "time_period"
         case ranking
         case updatedAt = "updated_at"
-    }
-}
-
-// MARK: - Friendship Model
-
-struct Friendship: Codable, Identifiable {
-    @DocumentID var id: String?
-    var userId: String
-    var friendId: String
-    var friendUsername: String
-    var friendProfilePictureURL: String?
-    var status: FriendshipStatus
-    var createdAt: Date
-    
-    enum FriendshipStatus: String, Codable {
-        case pending = "pending"
-        case accepted = "accepted"
-        case blocked = "blocked"
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case userId = "user_id"
-        case friendId = "friend_id"
-        case friendUsername = "friend_username"
-        case friendProfilePictureURL = "friend_profile_picture_url"
-        case status
-        case createdAt = "created_at"
     }
 }
 

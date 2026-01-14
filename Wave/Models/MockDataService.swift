@@ -1,73 +1,18 @@
 //
-//  Models.swift
+//  MockDataService.swift
 //  Wave
 //
-//  Created by Evan M Bourgoine on 12/23/25.
+//  Created by Evan M Bourgoine on 12/30/25.
+//
+
+//
+//  MockDataService.swift
+//  Wave
+//
+//  Mock data for development and testing
 //
 
 import Foundation
-import SwiftUI
-
-// MARK: - Music Models
-
-struct Song: Identifiable {
-    let id = UUID()
-    let title: String
-    let artist: String
-    let album: String
-    let artworkURL: String?
-    let playCount: Int
-    let totalMinutes: Int
-}
-
-struct Artist: Identifiable {
-    let id = UUID()
-    let name: String
-    let imageURL: String?
-    let playCount: Int
-    let totalMinutes: Int
-    let topSongs: [String]
-}
-
-struct Album: Identifiable {
-    let id = UUID()
-    let title: String
-    let artist: String
-    let artworkURL: String?
-    let playCount: Int
-}
-
-struct Genre: Identifiable {
-    let id = UUID()
-    let name: String
-    let percentage: Double
-    let color: Color
-}
-
-// MARK: - Analytics Models
-
-struct ListeningStats {
-    let totalMinutes: Int
-    let totalSongs: Int
-    let totalArtists: Int
-    let topGenres: [Genre]
-    let averageSessionLength: Int // in minutes
-    let longestSession: Int // in minutes
-}
-
-struct TimeDistribution: Identifiable {
-    let id = UUID()
-    let hour: Int
-    let minutes: Int
-}
-
-struct DailyListening: Identifiable {
-    let id = UUID()
-    let date: Date
-    let minutes: Int
-}
-
-// MARK: - Mock Data
 
 class MockDataService {
     static let shared = MockDataService()
