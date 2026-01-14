@@ -218,7 +218,7 @@ Required indexes (create in Firebase Console):
 
 ## 👨‍💻 Author
 
-[Evan M Bourgoine]
+Evan Bourgoine
 
 ## 🙏 Acknowledgments
 
